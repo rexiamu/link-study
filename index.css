@@ -84,7 +84,7 @@ main {
 }
 
 .content .list {
-  padding-top: 24px;
+  padding: 24px;
   display: flex;
   justify-content: space-between;
 }
@@ -125,15 +125,5 @@ main {
 .content .list .desc .el {
   display: flex;
   align-items: center;
-  text-indent: 1em;
   font-size: 12px;
-}
-
-.content .list .desc .el::before {
-  content: "";
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #999;
 }
