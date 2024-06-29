@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkStudy</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="left">
+      <div class="logo">
+        <img src="./images/logo.png">
+        <span>LinkStudy</span>
+      </div>
+      <nav>
+        <div class="item">首页</div>
+        <div class="item">推荐</div>
+        <div class="item">课程中心</div>
+      </nav>
+    </div>
+    <div class="right">
+      <nav>
+        <div class="item">离线模式</div>
+        <div class="item">登录/注册</div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/banner1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/banner2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/banner3.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/banner4.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="content">
+      <div class="title">
+        <span>为什么选择我们 LinkStudy？</span>
+        <span>我们的核心优势</span>
+      </div>
+      <div class="list">
+        <div class="item">
+          <div class="bg" style="--color: #67C23A;">专业</div>
+          <div class="desc">
+            <div class="el">根据学生的学习表现和偏好自动推荐适合的课程</div>
+            <div class="el">面部信息捕捉功能可以有效地识别学生是否进入学习状态</div>
+            <div class="el">虚拟助手可以帮助儿童学生在学习中获得更好的体验</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="bg" style="--color: #E6A23C;">方便</div>
+          <div class="desc">
+            <div class="el">让家长们及时了解孩子的学习进展并给予指导和帮助。</div>
+            <div class="el">保证同学们在没有网络的情况下也可以继续学习和娱乐</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="bg" style="--color: #409EFF">保障</div>
+          <div class="desc">
+            <div class="el">24小时在线 实时解答问题</div>
+            <div class="el">专属虚拟学伴 保证系统实施有效</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+<script src="https://unpkg.com/oh-my-live2d@latest"></script>
+
+<script>
+  // 轮播图
+  const mySwiper = new Swiper('.swiper', {
+    autoplay: true,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+
+  // 消息
+  const message = [
+    // 语文
+    "书籍是人类进步的阶梯。",
+    "多读书，开阔眼界；多写作，表达思想。",
+    "字词句段篇，篇篇需用心。",/*  */
+
+    // 数学
+    "数学是思维的体操。",
+    "数学的美丽在于它的逻辑和严谨。",
+    "学好数学，逻辑思维更清晰。",
+
+    // 英语
+    "学好英语，打开世界的窗户。",
+    "英语学习需要多听、多说、多读、多写。",
+    "每天背几个单词，积少成多。",
+
+    // 科学
+    "科学是探究世界奥秘的钥匙。",
+    "实验是科学的基础，多做实验，加深理解。",
+    "好奇心是科学发现的源泉。",
+
+    // 历史
+    "了解历史，才能更好地理解现在。",
+    "历史是人类文明的镜子。",
+    "学习历史，汲取前人的智慧。",
+
+    // 地理
+    "地理知识，让你了解地球的每个角落。",
+    "了解地理，知晓世界的多样性。",
+    "地理不仅是地图，更是对世界的认知。",
+
+    // 健康
+    "均衡饮食，保持健康体魄。",
+    "每天锻炼一小时，健康生活一辈子。",
+    "早睡早起，精力充沛。",
+
+    // 生活
+    "讲礼貌，懂礼仪，做文明学生。",
+    "努力学习，天天向上。",
+    "尊重他人，从小事做起。",
+
+    // 社交
+    "朋友是生活中的宝藏。",
+    "互相帮助，友谊长存。",
+    "遇到问题，沟通解决。"
+  ]
+
+  // 小助手
+  const oml2d = OML2D.loadOml2d({
+    dockedPosition: "right",
+    statusBar: {
+      restMessage: "休息中..."
+    },
+    menus: {
+      disable: true
+    },
+    models: [
+      {
+        "path": "https://model.oml2d.com/shizuku/shizuku.model.json",
+        "scale": 0.15,
+        "volume": 0,
+        "position": [0, 90],
+        "stageStyle": {
+          "height": 340,
+          "width": 200
+        }
+      }
+    ],
+    tips: {
+      style: {
+        transform: "translateY(-100px)"
+      },
+      copyTips: {
+        message: ["让我看看复制了什么？"]
+      },
+      idleTips: {
+        message
+      },
+      welcomeTips: {
+        message: {
+          afternoon: "下午好呀！"
+        }
+      }
+    }
+  });
+
+  // oml2d 加载完毕
+  oml2d.onLoad((status) => {
+    if (status === 'success') {
+      document.querySelector("#oml2d-canvas").addEventListener("click", () => {
+        oml2d.tipsMessage(randomArr(message))
+      })
+    }
+  });
+
+  // 数组随机取值函数
+  function randomArr(arr) {
+    return arr[Math.floor(Math.random() * arr.length)]
+  }
+</script>
+
+</html>

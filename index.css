@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+  --theme: #00beff;
+}
+
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 50px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .left {
+  display: flex;
+}
+
+header .right {
+  display: flex;
+}
+
+.logo {
+  margin-right: 36px;
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+  color: var(--theme);
+}
+
+.logo img {
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav .item {
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+nav .item:hover {
+  color: var(--theme);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin: 12px auto;
+
+  img {
+    width: 100%;
+  }
+}
+
+.content {
+  padding: 24px 0;
+}
+
+.content .title {
+  font-size: 32px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2em;
+}
+
+.content .list {
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .list .item {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #eee;
+  transition: box-shadow 0.3s;
+}
+
+.content .list .item:hover {
+  box-shadow: 0 0 15px #999;
+}
+
+.content .list .bg {
+  display: flex;
+  flex-direction: column;
+  font-size: 28px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: var(--color);
+}
+
+.content .list .desc {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  box-sizing: border-box;
+  line-height: 36px;
+}
+
+.content .list .desc .el {
+  display: flex;
+  align-items: center;
+  text-indent: 1em;
+  font-size: 12px;
+}
+
+.content .list .desc .el::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #999;
+}
